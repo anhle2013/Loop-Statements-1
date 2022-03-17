@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var N = 2, count = 0;
+        var kq = "" ;
+        var num = parseInt(prompt("Nhập số lượng số nguyên tố: "));
+
+        while(1){
+            var snt = 1;
+            for(var i = 2 ; i < N ; i++){
+                if(N % i == 0){
+                    snt = 0;
+                }
+            }
+            if(snt == 1){
+                kq += "  " + N ;
+                count++;
+            }
+            if(count >= num){
+                break;
+            }
+            N++;
+        }
+        alert(num + " số nguyên tố là : " + kq);
+
+    </script>
+</body>
+</html>
